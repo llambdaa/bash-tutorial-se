@@ -36,7 +36,7 @@ Most likely, you would want to install a GNU/Linux distribution. For the purpose
 the exact type doesn't matter - </br> but I would recommend Ubuntu, since it is easy to install and I
 can verify that it works.
   
-## Cheat Sheets <a id=cheat_sheets/>
+## Cheat Sheets
 ### Replacements
 | Placeholder | Description       |
 |-------------|-------------------|
