@@ -26,12 +26,11 @@ something I have struggled with when learning bash myself.
   
 ## Prerequisites
 You should have a working Unix system (MacOS, GNU/Linux[e.g. Ubuntu]) in order to participate
-during the presentation session. </br>
-If you don't have one, you can set one up for free using a Virtual Machine (VM).
+during the presentation session. If you don't have one, you can set one up for free using a Virtual Machine (VM).
 
 There are many different VMs, e.g. [Virtual Box](https://www.virtualbox.org/).
 Similarly, there are many good [tutorials](https://www.youtube.com/watch?v=x5MhydijWmc) on how to
-set up your system. </br> Most likely, you would want to install a GNU/Linux distribution. For the purpose of the talk,
+set up your system. Most likely, you would want to install a GNU/Linux distribution. For the purpose of the talk,
 the exact type doesn't matter - </br> but I would recommend Ubuntu, since it is easy to install and I
 can verify that it works.
   
