@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#1 Check argument count.
+ARGS=${#@}
+if [[ $ARGS == 0 ]]; then
+  echo "fac: Missing arguments." && exit 1
+fi
+
+#2 Check if argument is actually a natural number.
+if ! [[ "$1" =~ ^\+?[0-9]+$ ]]; then
+  echo "fac: Natural number expected (got: $1)." && exit 1
+fi
+
+#3 Calculate faculty.
+FAC=1
+for ((i=1; i <= $1; i++)); do
+  ((FAC*=i))
+done
+
+echo "Result: $FAC"
