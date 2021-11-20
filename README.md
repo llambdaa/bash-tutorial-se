@@ -16,7 +16,7 @@ Honestly, the syntax is sophisticated and especially for noobies seems cryptic a
 This is because bash is very nuanced - its short syntax forces extremely high semantic density. </br>
 One wrong token in the wrong context can blow up your work, especially when working with arrays </br>
 and evaluating expressions. Hence, we only focus on simple behaviour and predictable semantics. </br>
-But for the ones interested, I provide [cheat sheets](#-Cheat-Sheets) and additional information.
+But for the ones interested, I provide [cheat sheets](#Cheat-Sheets) and additional information.
 
 So, the overall goal is to show you what is **theoretically** possible. </br>
 In the practical part I, I will show you how the shells operates and which
