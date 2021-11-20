@@ -12,10 +12,10 @@ which types exist, </br> before I jump right into a practical part.
 There is simply not much to visualize since bash itself is very </br> system-near.
 However, there are many concepts we can explore by working with the system.
 
-Honestly, the syntax is sophisticated and especially for noobies seems cryptic and intimidating. </br>
+Honestly, the syntax is sophisticated and especially for newbies seems cryptic and intimidating. </br>
 This is because bash is very nuanced - its short syntax forces extremely high semantic density. </br>
 One wrong token in the wrong context can blow up your work, especially when working with arrays </br>
-and evaluating expressions. Hence, we only focus on simple behaviour and predictable semantics. </br>
+and evaluating expressions. Hence, we only focus on simple behavior and predictable semantics. </br>
 But for the ones interested, I provide [cheat sheets](#Cheat-Sheets) and additional information.
 
 So, the overall goal is to show you what is **theoretically** possible. </br>
@@ -25,13 +25,13 @@ to show you how you can make your own commands and thus expand the shell - </br>
 something I have struggled with when learning bash myself.
   
 ## Prerequisites
-You should have a working Unix system (MacOS, GNU/Linux[e.g. Ubuntu]) in order to participate
+You should have a working Unix system (macOS, GNU/Linux[e.g. Ubuntu]) in order to participate
 during the presentation session. If you don't have one, you can set one up for free using a Virtual Machine (VM).
 
-There are many different VMs, e.g. [Virtual Box](https://www.virtualbox.org/).
+There are many VMs, e.g. [Virtual Box](https://www.virtualbox.org/).
 Similarly, there are many good [tutorials](https://www.youtube.com/watch?v=x5MhydijWmc) on how to
 set up your system. Most likely, you would want to install a GNU/Linux distribution. For the purpose of the talk,
-the exact type doesn't matter - </br> but I would recommend [Ubuntu 21.10](https://releases.ubuntu.com/21.10/), since it is easy to install and I
+the exact type doesn't matter - </br> but I would recommend [Ubuntu 21.10](https://releases.ubuntu.com/21.10/), since it is easy to install, and I
 can verify that it works.
   
 ## Cheat Sheets
@@ -90,11 +90,11 @@ However, defining the executing </br> interpreter (```bash```) is cumbersome and
 
 ##### chmod
 However, if not already done, the script must be set to executable mode.
-Otherwise the interpreter won't run it, </br> because the file is seen as a normal text file.
+Otherwise, the interpreter won't run it, </br> because the file is seen as a normal text file.
 To do so, execute ```chmod +x ./path/to/script/fac```. </br> This will add(*+*) the mode e*X*ecutable to the script file.
 
 ##### Globalization
-The script is now executable, but not globaly visible. You still have to provide a path to the file </br> and
+The script is now executable, but not globally visible. You still have to provide a path to the file </br> and
 thus it is seen as a simple script, not as a command. </br></br>Either, you move it into a folder found in $PATH - this is
 where the system looks for files with the </br> name matching the issued command. Or you include the path to your command
 into $PATH. </br></br>One way to do so, is to edit ```~/.bashrc``` using the editor of your least mistrust. </br> In there, you enter ```PATH=$PATH:/path/to/script/```. This script will be issued each time an </br> interactive session is started and so $PATH will always include your custom path. </br> After editing, you have to either source .bashrc or restart the terminal.
