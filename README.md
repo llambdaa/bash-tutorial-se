@@ -69,4 +69,32 @@ can verify that it works.
   (2) [GNU Reference](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html) </br>
   (3) [Bracket Notation](https://stackoverflow.com/questions/2188199/how-to-use-double-or-single-brackets-parentheses-curly-braces)
   
-  
+## Explanation
+##### Logic
+I have prepared a custom command for the talk - afterwards you should at least know how </br>
+to make a global command yourself. Although the syntax is rather strange, the logic is simple:
+
+<pre>
+(1) Determine the amount of given arguments.
+    Error is thrown if there is not at least one.
+(2) The first argument (we don't care about more) must be
+    a natural number (proven with RegEx).
+(3) Have an accumulator. Iterate n times and multiply the accumulator
+    with loop counter variable. This leads to ```1*2*3*...\*n=n!```
+(4) Returning result.
+</pre>
+
+##### Execution
+The script can be using ```bash ./path/to/script/fac```.
+However, defining the executing </br> interpreter (```bash```) is cumbersome and repetitive. Including the [shebang](https://de.wikipedia.org/wiki/Shebang) ```#!/bin/bash``` does the trick. </br> The command could now be run with ```./path/to/script/fac```.
+
+##### chmod
+However, if not already done, the script must be set to executable mode.
+Otherwise the interpreter won't run it, </br> because the file is seen as a normal text file.
+To do so, execute ```chmod +x ./path/to/script/fac```. </br> This will add(*+*) the mode e*X*ecutable to the script file.
+
+##### Globalization
+The script is now executable, but not globaly visible. You still have to provide a path to the file </br> and
+thus it is seen as a simple script, not as a command. </br></br>Either, you move it into a folder found in $PATH - this is
+where the system looks for files with the </br> name matching the issued command. Or you include the path to your command
+into $PATH. </br></br>One way to do so, is to edit ```~/.bashrc``` using the editor of your least mistrust. </br> In there, you enter ```PATH=$PATH:/path/to/script/```. This script will be issued each time an </br> interactive session is started and so $PATH will always include your custom path. </br> After editing, you have to either source .bashrc or restart the terminal.
